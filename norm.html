@@ -1,0 +1,51 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="norm.css">
+	<title>Главная</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+<header class="media">
+	<nav class="clearfix">
+	<ul class="clearfix" style="">
+		<li><a href="#">Главная</a></li>
+		<li><a href="#">Спец. предложения</a></li>
+		<li><a href="#">Завтраки</a></li>
+		<li><a href="#">Бизнес-ланч</a></li>
+		<li><a href="#">Меню</a></li>
+		<li><a href="#">О кафе</a></li>
+		<li><a href="#">Контакты</a></li>	
+	</ul>
+	<table width="100%" id="pull" >
+		<tr>
+		<td style="text-align: left;">
+			<p>ЗДЕСЬ<br> БУДЕТ<br> ЛОГОТИП</p>
+		</td>
+		<td width="100%" style="text-align: right;">
+			<a href="#"style="text-align: right; height: 30px; padding: 5px;"><img src="Снимок.png" style="text-align: right;"></a>
+		</td>
+		</tr>
+	</table>
+</nav>
+</header>
+<script>
+$(function() {
+	var pull 		= $('#pull');
+		menu 		= $('nav ul');
+		menuHeight	= menu.height();
+
+	$(pull).on('click', function(e) {
+		e.preventDefault();
+		menu.slideToggle();
+	});
+});
+$(window).resize(function(){
+	var w = $(window).width();
+	if(w > 320 && menu.is(':hidden')) {
+		menu.removeAttr('style');
+	}
+});</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+nav li {
+	display: inline;
+
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+nav table {
+    color: #fff;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    text-shadow: 1px 1px 0px #283744;
+}
+nav table#pull {
+	display: none;
+}
+@media only screen and (max-width : 1000px) {
+	nav {
+		border-bottom: 0;
+	}
+	nav ul {
+		display: none;
+		height: auto;
+	}
+	nav table#pull {
+		display: block;
+		background-color: black;
+		width: 100%;
+		position: relative;
+	}
+	nav table#pull:after {
+		content:"";
+		background: url('nav-icon.png') no-repeat;
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		position: absolute;
+		right: 15px;
+		top: 10px;
+	}
+}
+.media {
+	display: 
+}
